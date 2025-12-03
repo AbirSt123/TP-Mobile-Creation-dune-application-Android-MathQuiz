@@ -1,131 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/margin_standard"
-    android:background="@color/light_background"
-    android:gravity="center">
+    android:background="@color/light_background">
 
-    <!-- Titre de l'application -->
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_app"
-        android:textSize="@dimen/text_size_title"
-        android:textStyle="bold"
-        android:textColor="@color/primary_blue"
-        android:layout_marginBottom="@dimen/margin_large" />
-
-    <!-- Conteneur des deux nombres -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/margin_large">
+        android:orientation="vertical"
+        android:padding="@dimen/margin_standard"
+        android:gravity="center">
 
-        <!-- Premier nombre -->
+        <!-- Titre -->
         <TextView
-            android:id="@+id/number1TextView"
+            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="@dimen/text_size_number"
+            android:text="@string/title_app"
+            android:textSize="@dimen/text_size_title"
             android:textStyle="bold"
-            android:textColor="@color/text_numbers"
-            android:layout_marginEnd="@dimen/margin_standard" />
+            android:textColor="@color/primary_blue"
+            android:layout_marginBottom="@dimen/margin_large"/>
 
-        <!-- Deuxième nombre -->
+        <!-- Score -->
         <TextView
-            android:id="@+id/number2TextView"
+            android:id="@+id/scoreTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="@dimen/text_size_number"
+            android:text="@string/score_label"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/text_numbers" />
-    </LinearLayout>
+            android:textColor="@color/dark_blue"
+            android:layout_marginBottom="@dimen/margin_large"/>
 
-    <!-- Instruction -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/instruction"
-        android:textSize="16sp"
-        android:layout_marginBottom="@dimen/margin_standard" />
+        <!-- Choix difficulté -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_title"
+            android:textSize="18sp"/>
 
-    <!-- Boutons d'opérations -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/margin_large">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_large">
 
-        <!-- Bouton Addition -->
+            <Button
+                android:id="@+id/buttonEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/easy"
+                android:backgroundTint="@color/primary_blue"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/buttonMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/medium"
+                android:backgroundTint="@color/button_subtract"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/buttonHard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hard"
+                android:backgroundTint="@color/button_multiply"/>
+
+
+        </LinearLayout>
+
         <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="@dimen/button_width_operation"
-            android:layout_height="@dimen/button_height"
-            android:text="@string/button_add"
-            android:textSize="@dimen/text_size_button"
-            android:backgroundTint="@color/button_add"
-            android:layout_marginEnd="8dp" />
-
-        <!-- Bouton Soustraction -->
-        <Button
-            android:id="@+id/buttonSubtract"
-            android:layout_width="@dimen/button_width_operation"
-            android:layout_height="@dimen/button_height"
-            android:text="@string/button_subtract"
-            android:textSize="@dimen/text_size_button"
-            android:backgroundTint="@color/button_subtract"
-            android:layout_marginEnd="8dp" />
-
-        <!-- Bouton Multiplication -->
-        <Button
-            android:id="@+id/buttonMultiply"
-            android:layout_width="@dimen/button_width_operation"
-            android:layout_height="@dimen/button_height"
-            android:text="@string/button_multiply"
-            android:textSize="@dimen/text_size_button"
-            android:backgroundTint="@color/button_multiply" />
-    </LinearLayout>
-
-    <!-- Affichage du résultat -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/margin_large">
-
-        <TextView
+            android:id="@+id/buttonResetScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/result_label"
-            android:textSize="@dimen/text_size_result"
-            android:textStyle="bold"
-            android:layout_marginEnd="8dp" />
-
-        <TextView
-            android:id="@+id/resultTextView"
+            android:text="Réinitialiser le score"
+            android:backgroundTint="@color/button_generate"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"/>
+        <!-- Nombres -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/result_placeholder"
-            android:textSize="@dimen/text_size_result"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_large">
+
+            <TextView
+                android:id="@+id/number1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="@dimen/text_size_number"
+                android:textStyle="bold"
+                android:textColor="@color/text_numbers"
+                android:layout_marginEnd="@dimen/margin_standard"/>
+
+            <TextView
+                android:id="@+id/number2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="@dimen/text_size_number"
+                android:textStyle="bold"
+                android:textColor="@color/text_numbers"/>
+        </LinearLayout>
+
+        <!-- Boutons opérations -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_large">
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="@dimen/button_width_operation"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/button_add"
+                android:backgroundTint="@color/button_add"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/buttonSubtract"
+                android:layout_width="@dimen/button_width_operation"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/button_subtract"
+                android:backgroundTint="@color/button_subtract"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:layout_width="@dimen/button_width_operation"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/button_multiply"
+                android:backgroundTint="@color/button_multiply"/>
+        </LinearLayout>
+
+        <!-- Résultat -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large">
+
+            <TextView
+                android:text="@string/result_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_result"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result_placeholder"
+                android:textSize="@dimen/text_size_result"
+                android:textStyle="bold"
+                android:textColor="@color/text_result"/>
+        </LinearLayout>
+
+        <!-- Bouton générer -->
+        <Button
+            android:id="@+id/buttonGenerate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/button_generate"
+            android:backgroundTint="@color/button_generate"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
+
+        <!-- Historique -->
+        <TextView
+            android:id="@+id/historyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_title"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/text_result" />
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/historyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/buttonClearHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vider l'historique"
+            android:backgroundTint="@color/button_multiply"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"/>
+
     </LinearLayout>
-
-    <!-- Bouton Générer -->
-    <Button
-        android:id="@+id/buttonGenerate"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/button_height"
-        android:text="@string/button_generate"
-        android:textSize="@dimen/text_size_button"
-        android:backgroundTint="@color/button_generate"
-        android:paddingStart="@dimen/padding_button"
-        android:paddingEnd="@dimen/padding_button" />
-
-</LinearLayout>
+</ScrollView>

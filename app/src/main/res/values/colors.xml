@@ -18,4 +18,8 @@
     <color name="button_generate">#9C27B0</color>
     <color name="text_result">#212121</color>
     <color name="text_numbers">#1565C0</color>
+
+    <color name="level_selected">#FF9800</color>
+    <color name="medium_initial_color">#FFEB3B</color>
+
 </resources>

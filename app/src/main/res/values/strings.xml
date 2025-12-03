@@ -8,4 +8,15 @@
     <string name="result_label">Résultat :</string>
     <string name="result_placeholder">\?</string>
     <string name="instruction">Choisissez une opération :</string>
+
+    <!-- Pour améliorations -->
+    <string name="score_label">Score : </string>
+
+    <string name="difficulty_title">Choisir la difficulté :</string>
+    <string name="easy">Facile</string>
+    <string name="medium">Moyen</string>
+    <string name="hard">Difficile</string>
+
+    <string name="history_title">Historique :</string>
+
 </resources>
