@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_standard"
+    android:background="@color/light_background"
+    android:gravity="center">
+
+    <!-- Titre de l'application -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_app"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        android:textColor="@color/primary_blue"
+        android:layout_marginBottom="@dimen/margin_large" />
+
+    <!-- Conteneur des deux nombres -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <!-- Premier nombre -->
+        <TextView
+            android:id="@+id/number1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="@dimen/text_size_number"
+            android:textStyle="bold"
+            android:textColor="@color/text_numbers"
+            android:layout_marginEnd="@dimen/margin_standard" />
+
+        <!-- Deuxième nombre -->
+        <TextView
+            android:id="@+id/number2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="@dimen/text_size_number"
+            android:textStyle="bold"
+            android:textColor="@color/text_numbers" />
+    </LinearLayout>
+
+    <!-- Instruction -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instruction"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/margin_standard" />
+
+    <!-- Boutons d'opérations -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <!-- Bouton Addition -->
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="@dimen/button_width_operation"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/button_add"
+            android:textSize="@dimen/text_size_button"
+            android:backgroundTint="@color/button_add"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Bouton Soustraction -->
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="@dimen/button_width_operation"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/button_subtract"
+            android:textSize="@dimen/text_size_button"
+            android:backgroundTint="@color/button_subtract"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Bouton Multiplication -->
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="@dimen/button_width_operation"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/button_multiply"
+            android:textSize="@dimen/text_size_button"
+            android:backgroundTint="@color/button_multiply" />
+    </LinearLayout>
+
+    <!-- Affichage du résultat -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result_label"
+            android:textSize="@dimen/text_size_result"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result_placeholder"
+            android:textSize="@dimen/text_size_result"
+            android:textStyle="bold"
+            android:textColor="@color/text_result" />
+    </LinearLayout>
+
+    <!-- Bouton Générer -->
+    <Button
+        android:id="@+id/buttonGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_generate"
+        android:textSize="@dimen/text_size_button"
+        android:backgroundTint="@color/button_generate"
+        android:paddingStart="@dimen/padding_button"
+        android:paddingEnd="@dimen/padding_button" />
+
+</LinearLayout>

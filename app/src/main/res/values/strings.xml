@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MathQuiz</string>
+    <string name="title_app">Quiz Mathématique</string>
+    <string name="button_add">+</string>
+    <string name="button_subtract">−</string>
+    <string name="button_multiply">×</string>
+    <string name="button_generate">Générer</string>
+    <string name="result_label">Résultat :</string>
+    <string name="result_placeholder">\?</string>
+    <string name="instruction">Choisissez une opération :</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tailles de texte -->
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_number">48sp</dimen>
+    <dimen name="text_size_result">32sp</dimen>
+    <dimen name="text_size_button">18sp</dimen>
+
+    <!-- Marges et espacements -->
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="padding_button">12dp</dimen>
+
+    <!-- Tailles des boutons -->
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="button_width_operation">80dp</dimen>
+</resources>
